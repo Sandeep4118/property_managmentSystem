@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Property Management System</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#tenants">Tenants</a></li>
+            <li><a href="#maintenance">Maintenance Requests</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="properties">
+            <h2>Properties</h2>
+            <form id="property-form">
+                <label for="property-name">Property Name:</label>
+                <input type="text" id="property-name" required>
+                <label for="property-address">Address:</label>
+                <input type="text" id="property-address" required>
+                <button type="submit">Add Property</button>
+            </form>
+            <table id="properties-table">
+                <thead>
+                    <tr>
+                        <th>Property Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Properties will be listed here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="tenants">
+            <h2>Tenants</h2>
+            <form id="tenant-form">
+                <label for="tenant-name">Tenant Name:</label>
+                <input type="text" id="tenant-name" required>
+                <label for="tenant-email">Email:</label>
+                <input type="email" id="tenant-email" required>
+                <label for="tenant-property">Property:</label>
+                <select id="tenant-property" required>
+                    <!-- Property options will be dynamically added here -->
+                </select>
+                <button type="submit">Add Tenant</button>
+            </form>
+            <table id="tenants-table">
+                <thead>
+                    <tr>
+                        <th>Tenant Name</th>
+                        <th>Email</th>
+                        <th>Property</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Tenants will be listed here -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="maintenance">
+            <h2>Maintenance Requests</h2>
+            <form id="maintenance-form">
+                <label for="maintenance-property">Property:</label>
+                <select id="maintenance-property" required>
+                    <!-- Property options will be dynamically added here -->
+                </select>
+                <label for="maintenance-description">Description:</label>
+                <textarea id="maintenance-description" required></textarea>
+                <button type="submit">Submit Request</button>
+            </form>
+            <table id="maintenance-table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Maintenance requests will be listed here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="scipt.js"></script>
+</body>
+</html>
